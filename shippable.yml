@@ -20,6 +20,8 @@ before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
 
+install:
+  - npm install node-gyp -g && npm cache clean && rm -rf node_modules && npm install
 
 # Running the tests with grunt
 script:
@@ -33,3 +35,4 @@ after_script:
 archive: true
 
 #cache: true
+build_image: drydock/u14nodpls:tip
