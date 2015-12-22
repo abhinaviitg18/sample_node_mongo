@@ -34,4 +34,3 @@ after_script:
 archive: true
 
 #cache: true
-build_image: drydock/u12nodpls:tip
