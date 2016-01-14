@@ -15,7 +15,7 @@ services:
 env:
   - XUNIT_FILE=shippable/testresults/result.xml
 before_install:
-  - travis_retry octave -q --eval "pkg install -forge $PN";
+  - travis_retry mongo test --eval "db.dropDatabase(); db.foo.find()";
 
 # Create directories for test and coverage reports
 before_script:
